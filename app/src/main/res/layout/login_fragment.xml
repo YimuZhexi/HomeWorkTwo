@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_background"
+        android:contentDescription="@string/todo"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/main_head"
+        app:layout_constraintBottom_toTopOf="@+id/til_fragment_username"
+        app:layout_constraintEnd_toEndOf="@+id/til_fragment_username"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/til_fragment_username"
+        tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_fragment_username"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/til_fragment_password"
+        app:layout_constraintEnd_toEndOf="@+id/til_fragment_password"
+        app:layout_constraintStart_toStartOf="@+id/til_fragment_password"
+        android:hint="@string/main_username">
+
+        <EditText
+            android:background="@color/white"
+            android:id="@+id/et_fragment_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_account_circle_24"
+            android:inputType="text"
+            android:lines="1"
+            android:textColor="@color/black"
+            tools:ignore="LabelFor,MissingConstraints,SpeakableTextPresentCheck"
+            android:autofillHints="AUTOFILL_HINT_USERNAME" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_fragment_password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="280dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="@string/main_password"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/et_fragment_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="AUTOFILL_HINT_PASSWORD"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+            android:inputType="textPassword"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_fragment_login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/main_login"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/cb_fragment_remember"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cb_fragment_remember"
+        app:layout_constraintTop_toBottomOf="@+id/cb_fragment_remember"
+        tools:ignore="MissingConstraints,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btn_fragment_create"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/main_create"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/btn_fragment_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_fragment_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fragment_login"
+        tools:ignore="MissingConstraints,TextContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/cb_fragment_remember"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/main_remember"
+        app:layout_constraintEnd_toEndOf="@+id/til_fragment_username"
+        app:layout_constraintStart_toStartOf="@+id/til_fragment_username"
+        app:layout_constraintTop_toBottomOf="@+id/til_fragment_password"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

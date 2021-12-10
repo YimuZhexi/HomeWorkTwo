@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeWorkTwo">
         <activity
-            android:name=".CreateFragment"
+            android:name=".fragment.CreateFragment"
             android:exported="false" />
         <activity
-            android:name=".LoginFragment"
+            android:name=".fragment.LoginFragment"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

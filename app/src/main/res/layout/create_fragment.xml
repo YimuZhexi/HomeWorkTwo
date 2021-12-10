@@ -2,8 +2,105 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="350dp"
+    android:layout_height="750dp"
+    android:background="@color/white"
     tools:context=".CreateFragment">
 
+    <ImageView
+        android:layout_width="138dp"
+        android:layout_height="189dp"
+        android:layout_marginBottom="64dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/main_head"
+        app:layout_constraintBottom_toTopOf="@+id/til_fragment_username_create"
+        app:layout_constraintEnd_toEndOf="@+id/til_fragment_username_create"
+        app:layout_constraintStart_toStartOf="@+id/til_fragment_username_create"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_fragment_username_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/til_fragment_password_create_1"
+        app:layout_constraintEnd_toEndOf="@+id/til_fragment_password_create_1"
+        app:layout_constraintStart_toStartOf="@+id/til_fragment_password_create_1"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/et_fragment_username_create"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="AUTOFILL_HINT_USERNAME"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_baseline_account_circle_24"
+            android:hint="@string/main_username"
+            android:inputType="text"
+            android:lines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_fragment_password_create_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/til_fragment_password_create_2"
+        app:layout_constraintEnd_toEndOf="@+id/til_fragment_password_create_2"
+        app:layout_constraintStart_toStartOf="@+id/til_fragment_password_create_2"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/et_fragment_password_create_1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="AUTOFILL_HINT_PASSWORD"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+            android:hint="@string/main_password"
+            android:inputType="textPassword"
+            android:lines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_fragment_password_create_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_fragment_create_yes"
+        app:layout_constraintEnd_toEndOf="@+id/btn_fragment_create_yes"
+        app:layout_constraintStart_toStartOf="@+id/btn_fragment_create_yes"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/et_fragment_password_create_2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="AUTOFILL_HINT_PASSWORD"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+            android:hint="@string/main_password"
+            android:inputType="textPassword"
+            android:lines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_fragment_create_yes"
+        android:textColorHint="@color/white"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/create_username_yes"
+        app:layout_constraintBottom_toTopOf="@+id/btn_fragment_create_last"
+        app:layout_constraintEnd_toEndOf="@+id/btn_fragment_create_last"
+        app:layout_constraintStart_toStartOf="@+id/btn_fragment_create_last"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_fragment_create_last"
+        android:textColorHint="@color/white"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        android:hint="@string/create_last"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
